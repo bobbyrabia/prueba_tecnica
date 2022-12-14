@@ -42,15 +42,18 @@ Miércoles 13 2022. 03:30 AM.
 
 9. creacion de repositorio angular
 
+
 10. creacion del panel de navegacion
 
-11. Create a screen that allows companies to be listed.
+11. Creacion de las rutas de las vistas
 
-12. Create a screen to create companies.
-13. Create a screen to edit the companies.
-14. Create a screen that allows you to list the departments.
-15. Create a screen to create departments.
-16. Create a screen to edit the departments.
-17. Create a screen that allows you to list the employees.
-18. Create a screen to create employees.
-19. Create a screen to edit the employees
+12. Create a screen that allows companies to be listed.
+
+13. Create a screen to create companies.
+14. Create a screen to edit the companies.
+15. Create a screen that allows you to list the departments.
+16. Create a screen to create departments.
+17. Create a screen to edit the departments.
+18. Create a screen that allows you to list the employees.
+19. Create a screen to create employees.
+20. Create a screen to edit the employees
