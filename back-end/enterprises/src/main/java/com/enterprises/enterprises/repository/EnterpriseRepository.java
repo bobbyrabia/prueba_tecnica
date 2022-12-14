@@ -1,5 +1,6 @@
 package com.enterprises.enterprises.repository;
 
+import com.enterprises.enterprises.model.Departments;
 import com.enterprises.enterprises.model.Enterprise;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -13,6 +14,8 @@ import java.util.Optional;
 
 @Repository
 public interface EnterpriseRepository extends JpaRepository<Enterprise,Integer> {
+    @Query("select e from Enterprise e where e.status = true")
+    List<Enterprise> getEnterpriseByStatus();
     List<Enterprise> findByName(String Name);
     @Query("select e from Enterprise e where e.id = ?1")
     Enterprise getEnterpriseById(Integer id);

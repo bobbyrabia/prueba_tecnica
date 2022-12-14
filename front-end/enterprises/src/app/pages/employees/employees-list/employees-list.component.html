@@ -1,1 +1,48 @@
-<p>employees-list works!</p>
+
+<div class="container">
+    <div class="lista">
+        <table class="table table-hover">
+            <thead>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Cargo</th>
+                <th>Edad</th>
+                <th>Correo electrónico</th>
+
+                
+            </thead>
+            <tbody>
+                <tr *ngFor="let empleado of employees" class="text-center">
+                    <td>    
+                        {{empleado.id}}
+                    </td>
+                    <td>
+                        {{empleado.name}}
+                    </td>
+                    <td>
+                        {{empleado.surname}}
+                    </td>
+                    <td>
+                        {{empleado.position}}
+                    </td>
+                    <td>
+                        {{empleado.age}}
+                    </td>
+                    <td>
+                        {{empleado.email}}
+                    </td>
+                  
+                    <td class="text-center">
+                        <button type="button" class="btn btn-warning">Editar</button>
+                        <!--
+                        <button type="button" class="btn btn-danger">Eliminar</button>
+                        -->
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  
+  </div>

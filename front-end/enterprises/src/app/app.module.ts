@@ -17,7 +17,7 @@ import { EnterpriseCreateComponent } from './pages/enterprise/enterprise-create/
 import { EmployeesListComponent } from './pages/employees/employees-list/employees-list.component';
 import { EmployeesCreateComponent } from './pages/employees/employees-create/employees-create.component';
 import { EmployeesEditComponent } from './pages/employees/employees-edit/employees-edit.component';
-
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +30,8 @@ import { EmployeesEditComponent } from './pages/employees/employees-edit/employe
     EnterpriseCreateComponent,
     EmployeesListComponent,
     EmployeesCreateComponent,
-    EmployeesEditComponent
+    EmployeesEditComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -39,6 +40,8 @@ import { EmployeesEditComponent } from './pages/employees/employees-edit/employe
     MatToolbarModule,
     MatIconModule,
     NgbModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

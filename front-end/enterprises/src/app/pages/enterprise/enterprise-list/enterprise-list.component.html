@@ -1,1 +1,39 @@
-<p>enterprise-list works!</p>
+
+<div class="container">
+    <div class="lista">
+        <table class="table table-hover">
+            <thead>
+                <th>Código</th>
+                <th>Empresa</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+                <th>Acción</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let enterprise of enterprises">
+                    <td>
+                        {{enterprise.id}}
+                    </td>
+                    <td>
+                        {{enterprise.name}}
+                    </td>
+                    <td>
+                        {{enterprise.address}}
+                    </td>
+                    <td>
+                        {{enterprise.phone}}
+                    </td>
+                  
+                    <td class="text-center">
+                        <button type="button" class="btn btn-warning">Editar</button>
+                        <!--
+                        <button type="button" class="btn btn-danger">Eliminar</button>
+                        -->
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  
+  </div>
