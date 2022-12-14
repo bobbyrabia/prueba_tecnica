@@ -46,7 +46,7 @@ class DepartmentsRepositoryTest {
         List<Departments> departmentsList=departmentsRepository.getDepartmentsByStatus();
         System.out.println("departmentsList = " + departmentsList);
     }
-
+/*
     @Test
     public void updateDepartamento(){
         Integer num=2;
@@ -59,5 +59,5 @@ class DepartmentsRepositoryTest {
                 num
                 );
     }
-
+*/
 }

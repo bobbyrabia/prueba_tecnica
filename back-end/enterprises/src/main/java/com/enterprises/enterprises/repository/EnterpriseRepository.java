@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,13 +17,13 @@ public interface EnterpriseRepository extends JpaRepository<Enterprise,Integer> 
     @Query("select e from Enterprise e where e.id = ?1")
     Enterprise getEnterpriseById(Integer id);
 
+
     @Modifying
     @Transactional
     @Query(
-            value="update enterprise set name=?1, phone=?2 where id=?3",
+            value="update enterprise set address=?1,modified_by=?2,modified_date=?3,name=?4, phone=?5 where id=?6",
             nativeQuery=true
     )
-    int updateEnterpriseById(String name, String phone, Integer id);
-
+    int updateEnterpriseById(String address, String modified_by,Date modified_date, String name, String phone, Integer id);
 
 }

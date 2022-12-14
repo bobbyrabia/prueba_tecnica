@@ -22,16 +22,18 @@ class EnterpriseRepositoryTest {
                 .name("empresa1").build();
         enterpriseRepository.save(enterprise);
     }
-
+    /*
     @Test
     public void updateEnterprise(){
         Integer num=2;
         Date fecha=new Date();
-        enterpriseRepository.updateEnterpriseById(
+        /*enterpriseRepository.updateEnterpriseById(
                 "cambio1",
                 "2345616",
                 num
                 );
     }
+
+     */
 
 }

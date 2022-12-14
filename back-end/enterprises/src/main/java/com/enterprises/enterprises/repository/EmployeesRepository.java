@@ -9,6 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 
 @Repository
@@ -19,10 +20,10 @@ public interface EmployeesRepository extends JpaRepository<Employees,Integer> {
     @Modifying
     @Transactional
     @Query(
-            value="update employees set name=?1, position=?2, surname=?3 where id=?4",
+            value="update employees set age=?1, email=?2 ,modified_by=?3, modified_date=?4, name=?5, position=?6, surname=?7 where id=?8",
             nativeQuery=true
     )
-    int updateEmployeeById(String name, String position, String surname, Integer id);
+    int updateEmployeeById(Integer age, String email, String modified_by, Date modified_date,String name, String position, String surname, Integer id);
 
 
 }

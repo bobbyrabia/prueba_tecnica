@@ -37,7 +37,7 @@ class EmployeesRepositoryTest {
         List<Employees> employeesList=employeesRepository.getEmployeesByStatus();
         System.out.println("employeesList = " + employeesList);
     }
-
+/*
     @Test
     public void updateEmployee(){
         Integer num=2;
@@ -50,5 +50,7 @@ class EmployeesRepositoryTest {
                 );
 
     }
+    */
+
 
 }

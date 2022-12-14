@@ -32,11 +32,13 @@ Miércoles 13 2022. 03:30 AM.
     listar empleados
     crear empleados 
     editar empleados
-    
+
 
 7. creacion de los servicios
 
+
 8. creacion de los controladores
+
 
 9. creacion de repositorio angular
 
