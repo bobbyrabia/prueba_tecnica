@@ -18,8 +18,8 @@ public class EnterpriseService {
         return enterpriseRepository.save(enterprise);
     }
 
-    public int editEnterprise(Enterprise enterprise){
-        return enterpriseRepository.updateEnterpriseById(enterprise.getAddress(),enterprise.getModified_by(), enterprise.getModified_date(), enterprise.getName(), enterprise.getPhone(),enterprise.getId());
+    public int editEnterprise(Integer id, Enterprise enterprise){
+        return enterpriseRepository.updateEnterpriseById(enterprise.getAddress(),enterprise.getModified_by(), enterprise.getModified_date(), enterprise.getName(), enterprise.getPhone(),id);
     }
 
     public List<Enterprise> listEnterprise(){

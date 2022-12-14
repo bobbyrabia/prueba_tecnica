@@ -18,8 +18,8 @@ public class DepartmentService {
 
     }
 
-    public int editDepartments(Departments departments){
-        return  departmentsRepository.updateDepartmentsById(departments.getModified_by(),departments.getModified_date(),departments.getDescription(),departments.getName(),departments.getPhone(),departments.getId_enterprise().getId(),departments.getId());
+    public int editDepartments(Integer id, Departments departments){
+        return  departmentsRepository.updateDepartmentsById(departments.getModified_by(),departments.getModified_date(),departments.getDescription(),departments.getName(),departments.getPhone(),departments.getId_enterprise().getId(),id);
     }
     public List<Departments> listDepartments(){
         return departmentsRepository.getDepartmentsByStatus();

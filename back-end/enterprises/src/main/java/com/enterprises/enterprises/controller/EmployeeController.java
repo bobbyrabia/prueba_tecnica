@@ -4,10 +4,8 @@ import com.enterprises.enterprises.model.Employees;
 import com.enterprises.enterprises.model.Enterprise;
 import com.enterprises.enterprises.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,4 +18,26 @@ public class EmployeeController {
 
     @GetMapping("/employees-listar")
     List<Employees> listaEmployees(){return employeeService.listEmployees();}
+
+
+    @ResponseStatus(HttpStatus.CREATED)
+    @PostMapping("/employees-create")
+    Employees createEmployee(@RequestBody Employees employee){
+        return  employeeService.createEmployees(employee);
+
+    }
+    @PutMapping("/employees-edit/{id}")
+    int employeeEdit(@PathVariable Integer id,@RequestBody Employees employees){
+        try{
+            return employeeService.editEmployees(id, employees);
+
+        }catch (Exception e){
+            System.out.println("Exception "+e);
+            return 0;
+        }
+
+
+    }
+
+
 }

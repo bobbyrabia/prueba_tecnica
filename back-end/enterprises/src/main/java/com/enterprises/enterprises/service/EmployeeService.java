@@ -17,8 +17,8 @@ public class EmployeeService {
         return employeesRepository.save(employees);
     }
 
-    public int editEmployees(Employees employees){
-        return employeesRepository.updateEmployeeById(employees.getAge(),employees.getEmail(),employees.getModified_by(),employees.getModified_date(),employees.getName(),employees.getPosition(),employees.getSurname(),employees.getId());
+    public int editEmployees(Integer id, Employees employees){
+        return employeesRepository.updateEmployeeById(employees.getAge(),employees.getEmail(),employees.getModified_by(),employees.getModified_date(),employees.getName(),employees.getPosition(),employees.getSurname(),id);
     }
     public List<Employees> listEmployees(){
         return employeesRepository.getEmployeesByStatus();
