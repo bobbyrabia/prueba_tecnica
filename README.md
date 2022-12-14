@@ -21,11 +21,34 @@ Martes 13 2022. 07:30 AM.
 Miércoles 13 2022. 03:30 AM.
 
 
-5. creacion de los repositorios
+5. creacion de los repositorios 
 
 
 6. creacion de los servicios de testeo
+    crear compañía
+    editar compañia
+    listar departamentos
+    editar departamentos
+    listar empleados
+    crear empleados 
+    editar empleados
+    
 
 7. creacion de los servicios
 
 8. creacion de los controladores
+
+9. creacion de repositorio angular
+
+10. creacion del panel de navegacion
+
+11. Create a screen that allows companies to be listed.
+
+12. Create a screen to create companies.
+13. Create a screen to edit the companies.
+14. Create a screen that allows you to list the departments.
+15. Create a screen to create departments.
+16. Create a screen to edit the departments.
+17. Create a screen that allows you to list the employees.
+18. Create a screen to create employees.
+19. Create a screen to edit the employees
