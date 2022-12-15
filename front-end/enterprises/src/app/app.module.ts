@@ -18,6 +18,7 @@ import { EmployeesListComponent } from './pages/employees/employees-list/employe
 import { EmployeesCreateComponent } from './pages/employees/employees-create/employees-create.component';
 import { EmployeesEditComponent } from './pages/employees/employees-edit/employees-edit.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     MatIconModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
     
   ],
   providers: [],

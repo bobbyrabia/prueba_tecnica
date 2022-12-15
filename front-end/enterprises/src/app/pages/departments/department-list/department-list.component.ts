@@ -25,7 +25,7 @@ export class DepartmentListComponent implements OnInit {
   
 
   private obtenerDepartment(){
-      this.departmentService.getListEnterprise().subscribe((data) => {
+      this.departmentService.getListDepartment().subscribe((data) => {
         this.departments = data;
         //console.log(this.departments);
         console.log(this.departments[0].id_enterprise.name);

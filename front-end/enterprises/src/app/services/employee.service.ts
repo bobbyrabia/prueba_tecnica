@@ -8,11 +8,22 @@ import { Employee } from '../model/employee';
 })
 export class EmployeeService {
   private urlListar='http://localhost:8080/employeer/employees-listar';
+  private urlCrear='http://localhost:8080/employeer/employees-create';
+  private urlEditar='http://localhost:8080/employeer/employees-edit';
 
   constructor(private httpClient:HttpClient) { }
  
 
-  getListEnterprise():Observable<Employee[]>{
+  getListEmployee():Observable<Employee[]>{
     return this.httpClient.get<Employee[]>(`${this.urlListar}`);
   }
+  creEmployee(employee:Employee) : Observable<Object>{
+    return this.httpClient.post(`${this.urlCrear}`,employee);
+  }
+
+  
+  updEmployee(id:number,employee:Employee) : Observable<Object>{
+    return this.httpClient.put(`${this.urlEditar}/${id}`,employee);
+  }
+
 }

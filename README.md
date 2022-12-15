@@ -51,10 +51,18 @@ Miércoles 13 2022. 03:30 AM.
 12. Create a screen that allows companies to be listed.
 
 13. Create a screen to create companies.
+
 14. Create a screen to edit the companies.
+
 15. Create a screen that allows you to list the departments.
+
 16. Create a screen to create departments.
+
 17. Create a screen to edit the departments.
+
 18. Create a screen that allows you to list the employees.
+
 19. Create a screen to create employees.
+
 20. Create a screen to edit the employees
+

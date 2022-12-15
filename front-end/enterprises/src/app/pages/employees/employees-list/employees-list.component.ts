@@ -21,7 +21,7 @@ export class EmployeesListComponent implements OnInit {
   
 
   private obtenerEmployee(){
-      this.employSvc.getListEnterprise().subscribe((data: Employee[]) => {
+      this.employSvc.getListEmployee().subscribe((data: Employee[]) => {
         this.employees = data;
         console.log(data);
        });
