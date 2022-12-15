@@ -12,7 +12,7 @@ import swal from 'sweetalert2';
 export class EmployeesCreateComponent implements OnInit {
   employee:Employee=new Employee();
   submitted:false;
-  
+  cargos:string[]=["CEO","ADMINISTRATIVO","MANTENIMIENTO", "DESARROLLO"];
   constructor(private employeeService:EmployeeService,private router:Router) { }
 
   ngOnInit(): void {

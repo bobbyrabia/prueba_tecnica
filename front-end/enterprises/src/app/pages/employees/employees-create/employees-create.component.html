@@ -43,13 +43,14 @@
         </div>
         <div class="mb-3">
             <label for="position" class="form-label">Cargo:</label>
-            <input type="text" 
-                   class="form-control" 
-                   id="position" 
-                   name="position"
-                   required
-                   [(ngModel)] = "employee.position"
-                   />
+            <select class="form-control" 
+                    name="position"
+                     id="position" 
+                     [(ngModel)]="employee.position"
+                     required
+                     >
+                <option [value]="item" *ngFor="let item of cargos">{{item}}</option>
+                </select>
             
         </div>
         
