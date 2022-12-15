@@ -9,6 +9,8 @@ import { EmployeeService } from 'src/app/services/employee.service';
   styleUrls: ['./employees-list.component.css']
 })
 export class EmployeesListComponent implements OnInit {
+
+  
   employees:Employee[] | undefined;
   
   constructor(private employSvc:EmployeeService, private router:Router) { 
@@ -29,8 +31,9 @@ export class EmployeesListComponent implements OnInit {
       
   }
 
-  actualizarEmpleado(id:number){
-    this.router.navigate(['actualizar-empleado',id]);
+  updEmployee(id:number){
+    this.router.navigate(['employees/employee-edit',id]);
   }
+
 
 }

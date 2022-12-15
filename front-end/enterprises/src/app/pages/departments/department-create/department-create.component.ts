@@ -18,6 +18,7 @@ export class DepartmentCreateComponent implements OnInit {
   constructor(private enterpriseService:EnterpriseService, private departmentService:DepartmentService, private router:Router) { this.obtenerEnterprise()}
 
   ngOnInit(): void {
+    
   }
   private obtenerEnterprise(){
     this.enterpriseService.getListEnterprise().subscribe((data) => {

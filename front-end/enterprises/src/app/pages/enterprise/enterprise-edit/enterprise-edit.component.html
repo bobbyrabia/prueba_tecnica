@@ -1,27 +1,42 @@
 <div class="container col-md" style="margin-top:12px ;">
     <h1 class="text-center">EDITAR EMPRESA</h1>
     <form>
+        
         <div class="mb-3">
-            <label for="nameEnterprise" class="form-label">Razón social de la empresa:</label>
-            <input type="text" class="form-control" id="nameEnterprise" >
+            <label for="name" class="form-label">Razón social de la empresa:</label>
+            <input type="text" 
+                    class="form-control" 
+                    id="name"
+                    required
+                    [(ngModel)] = "enterprise.name"
+                    name = "name"/>
             
         </div>
         <div class="mb-3">
-            <label for="phoneEnterprise" class="form-label">Telefono:</label>
-            <input type="text" class="form-control" id="phoneEnterprise" >
+            <label for="phone" class="form-label">Telefono:</label>
+            <input type="text" 
+                class="form-control" 
+                id="phone"
+                required
+                [(ngModel)] = "enterprise.phone"
+                name = "phone"/>
             
         </div>
         <div class="mb-3">
             <label for="addressEnterprise" class="form-label">Dirección:</label>
-            <input type="text" class="form-control" id="addressEnterprise" >
+            <input type="text" 
+                class="form-control" 
+                id="address"
+                [(ngModel)] = "enterprise.address"
+                name = "address"/>
             
         </div>
-        <div class="mb-3">
-        <label for="emailEnterprise" class="form-label">Correo electrónico</label>
-        <input type="email" class="form-control" id="emailEnterprise" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Ingrese el correo electrónico.</div>
-        </div>
         
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button 
+            (click)="onSubmit()"
+            class="btn btn-success">Enviar
+        </button>
+        
     </form>
+    
 </div>

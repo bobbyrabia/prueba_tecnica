@@ -12,13 +12,13 @@ import { EnterpriseListComponent } from './pages/enterprise/enterprise-list/ente
 
 const routes: Routes = [
   {path:'enterprise/enterprise-list',component:EnterpriseListComponent},
-  {path:'enterprise/enterprise-edit',component:EnterpriseEditComponent},
+  {path:'enterprise/enterprise-edit/:id',component:EnterpriseEditComponent},
   {path:'enterprise/enterprise-create',component:EnterpriseCreateComponent},
   {path:'departments/department-list',component:DepartmentListComponent},
-  {path:'departments/department-edit',component:DepartmentEditComponent},
+  {path:'departments/department-edit/:id',component:DepartmentEditComponent},
   {path:'departments/department-create',component:DepartmentCreateComponent},
   {path:'employees/employee-list',component:EmployeesListComponent},
-  {path:'employees/employee-edit',component:EmployeesEditComponent},
+  {path:'employees/employee-edit/:id',component:EmployeesEditComponent},
   {path:'employees/employee-create',component:EmployeesCreateComponent},
   {path:'**',redirectTo:'',pathMatch:'full'},
 

@@ -1,5 +1,6 @@
 package com.enterprises.enterprises.controller;
 
+import com.enterprises.enterprises.model.Departments;
 import com.enterprises.enterprises.model.Employees;
 import com.enterprises.enterprises.model.Enterprise;
 import com.enterprises.enterprises.service.EmployeeService;
@@ -18,6 +19,9 @@ public class EmployeeController {
 
     @GetMapping("/employees-listar")
     List<Employees> listaEmployees(){return employeeService.listEmployees();}
+
+    @GetMapping("/employeeid/{id}")
+    Employees findEmployee(@PathVariable Integer id){ return  employeeService.findEmployeeById(id);}
 
 
     @ResponseStatus(HttpStatus.CREATED)

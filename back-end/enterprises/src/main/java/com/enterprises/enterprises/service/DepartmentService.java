@@ -26,7 +26,19 @@ public class DepartmentService {
         return departmentsRepository.save(departments);
     }
 
+    public Departments findDepartmentById(Integer id){
+        return departmentsRepository.getDepartmentsByIdAndStatus(id);
+    }
     public int editDepartments(Integer id, Departments departments){
+        Enterprise enterprise_temp=enterpriseService.findEnterpriseById(departments.getId_enterprise().getId());
+
+        System.out.println("entro");
+        departments.setStatus(true);
+        departments.setModified_by("usuario 2");
+        Date fecha=new Date();
+        departments.setModified_date(fecha);
+        System.out.println(departments.getModified_by()+" "+departments.getModified_date());
+        departments.setId_enterprise(enterprise_temp);
         return  departmentsRepository.updateDepartmentsById(departments.getModified_by(),departments.getModified_date(),departments.getDescription(),departments.getName(),departments.getPhone(),departments.getId_enterprise().getId(),id);
     }
     public List<Departments> listDepartments(){

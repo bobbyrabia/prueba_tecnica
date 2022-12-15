@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Enterprise } from 'src/app/model/enterprise';
 import { EnterpriseService } from 'src/app/services/enterprise.service';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-enterprise-list',
@@ -11,7 +12,7 @@ import { HttpClient } from '@angular/common/http';
 export class EnterpriseListComponent implements OnInit {
   enterprises!: Enterprise[];
   
-  constructor(private enterpriseSvc:EnterpriseService) { 
+  constructor(private enterpriseSvc:EnterpriseService,private router:Router) { 
     
     this.obtenerEnterprise()
   }
@@ -27,6 +28,9 @@ export class EnterpriseListComponent implements OnInit {
         
        });
       
+  }
+  updEnterprise(id:number){
+    this.router.navigate(['enterprise/enterprise-edit',id]);
   }
 
 

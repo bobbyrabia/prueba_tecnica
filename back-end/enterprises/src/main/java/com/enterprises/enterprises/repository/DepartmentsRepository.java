@@ -1,6 +1,7 @@
 package com.enterprises.enterprises.repository;
 
 import com.enterprises.enterprises.model.Departments;
+import com.enterprises.enterprises.model.Enterprise;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -15,6 +16,8 @@ public interface DepartmentsRepository extends JpaRepository<Departments,Integer
     @Query("select d from Departments d where d.status = true")
     List<Departments> getDepartmentsByStatus();
 
+    @Query("select d from Departments d where d.id = ?1 and d.status=true")
+    Departments getDepartmentsByIdAndStatus(Integer id);
     @Modifying
     @Transactional
     @Query(

@@ -1,5 +1,6 @@
 package com.enterprises.enterprises.controller;
 
+import com.enterprises.enterprises.model.Employees;
 import com.enterprises.enterprises.model.Enterprise;
 import com.enterprises.enterprises.service.EnterpriseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,8 @@ public class EnterpriseController {
     @GetMapping("/enterprise-listar")
     List<Enterprise>listaEnterprise(){return enterpriseService.listEnterprise();}
 
+    @GetMapping("/enterpriseid/{id}")
+    Enterprise findEnterprise(@PathVariable Integer id){ return enterpriseService.findEnterpriseById(id);}
 
 
     @ResponseStatus(HttpStatus.CREATED)

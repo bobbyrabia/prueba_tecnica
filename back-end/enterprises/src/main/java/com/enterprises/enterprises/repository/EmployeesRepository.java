@@ -17,6 +17,8 @@ public interface EmployeesRepository extends JpaRepository<Employees,Integer> {
     @Query("select e from Employees e where e.status = true")
     List<Employees> getEmployeesByStatus();
 
+    @Query("select e from Employees e where e.id = ?1 and e.status=true")
+    Employees getEmployeesByIdAndStatus(Integer id);
     @Modifying
     @Transactional
     @Query(

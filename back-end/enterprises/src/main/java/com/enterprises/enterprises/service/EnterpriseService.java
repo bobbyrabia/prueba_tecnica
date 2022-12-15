@@ -23,6 +23,11 @@ public class EnterpriseService {
     }
 
     public int editEnterprise(Integer id, Enterprise enterprise){
+        enterprise.setStatus(true);
+        enterprise.setModified_by("usuario 2");
+        Date fecha=new Date();
+        enterprise.setModified_date(fecha);
+        System.out.println(enterprise.getModified_by()+" "+enterprise.getModified_date());
         return enterpriseRepository.updateEnterpriseById(enterprise.getAddress(),enterprise.getModified_by(), enterprise.getModified_date(), enterprise.getName(), enterprise.getPhone(),id);
     }
     public Enterprise findEnterpriseById(Integer id){

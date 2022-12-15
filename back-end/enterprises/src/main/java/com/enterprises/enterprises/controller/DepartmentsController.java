@@ -20,6 +20,8 @@ public class DepartmentsController {
 
     @GetMapping("/department-listar")
     List<Departments> listaDepartments(){return departmentService.listDepartments();}
+    @GetMapping("/departmentid/{id}")
+    Departments findDepartment(@PathVariable Integer id){ return  departmentService.findDepartmentById(id);}
 
 
     @ResponseStatus(HttpStatus.CREATED)

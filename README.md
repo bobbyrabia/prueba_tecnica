@@ -60,6 +60,9 @@ Miércoles 13 2022. 03:30 AM.
 17. Create a screen to edit the departments.
 20. Create a screen to edit the employees
 
+Corregir mensajes
+HACERLE SELECT AL CARGO
+
 Create an installation guide to get the application up and running.
 11. Source code for review.
 12. Access to the code versioning repository.

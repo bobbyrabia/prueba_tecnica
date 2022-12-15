@@ -10,10 +10,13 @@ export class EmployeeService {
   private urlListar='http://localhost:8080/employeer/employees-listar';
   private urlCrear='http://localhost:8080/employeer/employees-create';
   private urlEditar='http://localhost:8080/employeer/employees-edit';
+  private urlEmployeeId='http://localhost:8080/employeer/employeeid';
 
   constructor(private httpClient:HttpClient) { }
  
-
+  getEmployeeById(id:number):Observable<Employee>{ 
+    return this.httpClient.get<Employee>(`${this.urlEmployeeId}/${id}`);
+  }
   getListEmployee():Observable<Employee[]>{
     return this.httpClient.get<Employee[]>(`${this.urlListar}`);
   }

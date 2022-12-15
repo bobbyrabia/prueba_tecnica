@@ -21,8 +21,16 @@ public class EmployeeService {
         employees.setCreated_date(fecha);
         return employeesRepository.save(employees);
     }
+    public Employees findEmployeeById(Integer id){
+        return employeesRepository.getEmployeesByIdAndStatus(id);
+    }
 
     public int editEmployees(Integer id, Employees employees){
+        employees.setStatus(true);
+        employees.setModified_by("usuario 2");
+        Date fecha=new Date();
+        employees.setModified_date(fecha);
+        System.out.println(employees.getModified_by()+" "+employees.getModified_date());
         return employeesRepository.updateEmployeeById(employees.getAge(),employees.getEmail(),employees.getModified_by(),employees.getModified_date(),employees.getName(),employees.getPosition(),employees.getSurname(),id);
     }
     public List<Employees> listEmployees(){
