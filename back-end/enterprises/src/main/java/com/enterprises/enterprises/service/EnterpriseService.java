@@ -15,11 +15,18 @@ public class EnterpriseService {
     EnterpriseRepository enterpriseRepository;
 
     public Enterprise createEnterprise(Enterprise enterprise){
+        enterprise.setStatus(true);
+        enterprise.setCreated_by("usuario 1");
+        Date fecha=new Date();
+        enterprise.setCreated_date(fecha);
         return enterpriseRepository.save(enterprise);
     }
 
     public int editEnterprise(Integer id, Enterprise enterprise){
         return enterpriseRepository.updateEnterpriseById(enterprise.getAddress(),enterprise.getModified_by(), enterprise.getModified_date(), enterprise.getName(), enterprise.getPhone(),id);
+    }
+    public Enterprise findEnterpriseById(Integer id){
+        return enterpriseRepository.getEnterpriseByIdAAndStatus(id);
     }
 
     public List<Enterprise> listEnterprise(){

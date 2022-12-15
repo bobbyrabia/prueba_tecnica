@@ -10,7 +10,9 @@ import swal from 'sweetalert2';
   styleUrls: ['./employees-create.component.css']
 })
 export class EmployeesCreateComponent implements OnInit {
-  employee !: Employee;
+  employee:Employee=new Employee();
+  submitted:false;
+  
   constructor(private employeeService:EmployeeService,private router:Router) { }
 
   ngOnInit(): void {
@@ -24,7 +26,7 @@ export class EmployeesCreateComponent implements OnInit {
 
   goToEmployee(){
     this.router.navigate(['/employees/employee-list']);
-    //swal('Empleado registrado',`El empleado ${this.employee.name} ha sido registrado con exito`,`success`);
+    swal.fire('Empleado registrado',`El empleado ${this.employee.name} ha sido registrado con exito`,`success`);
   }
 
   onSubmit(){

@@ -14,6 +14,8 @@ import java.util.Optional;
 
 @Repository
 public interface EnterpriseRepository extends JpaRepository<Enterprise,Integer> {
+    @Query("select e from Enterprise e where e.id = ?1 and e.status=true")
+    Enterprise getEnterpriseByIdAAndStatus(Integer id);
     @Query("select e from Enterprise e where e.status = true")
     List<Enterprise> getEnterpriseByStatus();
     List<Enterprise> findByName(String Name);

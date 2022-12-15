@@ -6,6 +6,7 @@ import com.enterprises.enterprises.repository.EmployeesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -14,6 +15,10 @@ public class EmployeeService {
     EmployeesRepository employeesRepository;
 
     public Employees createEmployees(Employees employees){
+        employees.setStatus(true);
+        employees.setCreated_by("usuario 1");
+        Date fecha=new Date();
+        employees.setCreated_date(fecha);
         return employeesRepository.save(employees);
     }
 

@@ -2,26 +2,62 @@
     <h1 class="text-center">AGREGAR EMPLEADO</h1>
     <form>
         <div class="mb-3">
-            <label for="nameEnterprise" class="form-label">Razón social de la empresa:</label>
-            <input type="text" class="form-control" id="nameEnterprise" >
+            <label for="name" class="form-label">Nombres del empleado:</label>
+            <input type="text" 
+                   class="form-control" 
+                   id="name"
+                   required
+                   [(ngModel)] = "employee.name"
+                   name = "name"/>
+        </div>
+        <div class="mb-3">
+            <label for="surname" class="form-label">Apellidos del empleado:</label>
+            <input type="text" 
+                   class="form-control" 
+                   id="surname" 
+                   required
+                   [(ngModel)] = "employee.surname"
+                   name = "surname"/>
             
         </div>
         <div class="mb-3">
-            <label for="phoneEnterprise" class="form-label">Telefono:</label>
-            <input type="text" class="form-control" id="phoneEnterprise" >
+            <label for="age" class="form-label">Edad:</label>
+            <input type="number" 
+                   class="form-control" 
+                   id="age" 
+                   required
+                   [(ngModel)] = "employee.age"
+                   name = "age"/>
             
         </div>
         <div class="mb-3">
-            <label for="addressEnterprise" class="form-label">Dirección:</label>
-            <input type="text" class="form-control" id="addressEnterprise" >
-            
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" 
+                   class="form-control" 
+                   id="email" 
+                   required
+                   [(ngModel)] = "employee.email"
+                   name="email"
+                   aria-describedby="emailHelp"/>
+            <div id="emailHelp" class="form-text">Ingrese el correo electrónico.</div>
         </div>
         <div class="mb-3">
-        <label for="emailEnterprise" class="form-label">Correo electrónico</label>
-        <input type="email" class="form-control" id="emailEnterprise" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Ingrese el correo electrónico.</div>
+            <label for="position" class="form-label">Cargo:</label>
+            <input type="text" 
+                   class="form-control" 
+                   id="position" 
+                   name="position"
+                   required
+                   [(ngModel)] = "employee.position"
+                   />
+            
         </div>
         
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        
+        
+        <button 
+            (click)="onSubmit()"
+            class="btn btn-success">Enviar
+        </button>
     </form>
 </div>

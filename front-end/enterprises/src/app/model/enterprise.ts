@@ -1,4 +1,4 @@
-export interface Enterprise {
+export class Enterprise {
     id:number;
     created_by:String;
     created_date:Date;

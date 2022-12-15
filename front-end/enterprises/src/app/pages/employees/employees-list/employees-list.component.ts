@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Employee } from 'src/app/model/employee';
 import { EmployeeService } from 'src/app/services/employee.service';
 
@@ -10,7 +11,7 @@ import { EmployeeService } from 'src/app/services/employee.service';
 export class EmployeesListComponent implements OnInit {
   employees:Employee[] | undefined;
   
-  constructor(private employSvc:EmployeeService) { 
+  constructor(private employSvc:EmployeeService, private router:Router) { 
     
     this.obtenerEmployee()
   }
@@ -26,6 +27,10 @@ export class EmployeesListComponent implements OnInit {
         console.log(data);
        });
       
+  }
+
+  actualizarEmpleado(id:number){
+    this.router.navigate(['actualizar-empleado',id]);
   }
 
 }

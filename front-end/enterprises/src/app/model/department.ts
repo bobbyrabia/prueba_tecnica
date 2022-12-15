@@ -1,6 +1,6 @@
 import { Enterprise } from "./enterprise";
 
-export interface Department {
+export class Department {
     id:number;
     created_by:String;
     created_date:Date;

@@ -1,4 +1,4 @@
-export interface Employee {
+export class Employee {
      id:number;
      created_by:String;
      created_date:Date;

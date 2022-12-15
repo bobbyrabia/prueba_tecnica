@@ -1,27 +1,24 @@
 <div class="container col-md" style="margin-top:12px ;">
     <h1 class="text-center">NUEVA EMPRESA</h1>
-    <form (ngSubmit)= "onSubmit()" #enterpriseForm = "ngForm" >
+    <form>
         <div class="mb-3">
-            <label for="nameEnterprise" class="form-label">Razón social de la empresa:</label>
-
+            <label for="name" class="form-label">Razón social de la empresa:</label>
             <input type="text" 
-                class="form-control" 
-                id="name"
-                [(ngModel)] = "enterprise.name"
-                name = "name"
-                #name = "ngModel"
-                >
+                    class="form-control" 
+                    id="name"
+                    required
+                    [(ngModel)] = "enterprise.name"
+                    name = "name"/>
             
         </div>
         <div class="mb-3">
-            <label for="phoneEnterprise" class="form-label">Telefono:</label>
+            <label for="phone" class="form-label">Telefono:</label>
             <input type="text" 
                 class="form-control" 
                 id="phone"
-                [(ngModel)] = "model.phone"
-                name = "phone"
-                #phone = "ngModel"
-                 >
+                required
+                [(ngModel)] = "enterprise.phone"
+                name = "phone"/>
             
         </div>
         <div class="mb-3">
@@ -29,15 +26,14 @@
             <input type="text" 
                 class="form-control" 
                 id="address"
-                [(ngModel)] = "model.address"
-                name = "address"
-                #address = "ngModel"
-                 >
+                [(ngModel)] = "enterprise.address"
+                name = "address"/>
             
         </div>
         
-        <button type="button" 
-        (click)="onSubmit()"
-        class="btn btn-primary">Enviar</button>
+        <button 
+            (click)="onSubmit()"
+            class="btn btn-success">Enviar
+        </button>
     </form>
 </div>
