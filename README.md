@@ -48,22 +48,22 @@ Miércoles 13 2022. 03:30 AM.
 11. Creacion de las rutas de las vistas
 12. Creacion de servicios
 
-12. Create a screen that allows companies to be listed.
-13. Create a screen to create companies.
+13. Create a screen that allows companies to be listed.
+14. Create a screen to create companies.
 15. Create a screen that allows you to list the departments.
 16. Create a screen to create departments.
-18. Create a screen that allows you to list the employees.
-19. Create a screen to create employees.
+17. Create a screen that allows you to list the employees.
+18. Create a screen to create employees.
 
 
-14. Create a screen to edit the companies.
-17. Create a screen to edit the departments.
-20. Create a screen to edit the employees
+19. Create a screen to edit the companies.
+20. Create a screen to edit the departments.
+21. Create a screen to edit the employees
 
-Corregir mensajes
-HACERLE SELECT AL CARGO
+22. Corregir mensajes
+23. HACERLE SELECT AL CARGO
 
-Create an installation guide to get the application up and running.
-11. Source code for review.
-12. Access to the code versioning repository.
-13. Document with images with evidence of the application
+24. Create an installation guide to get the application up and running.
+25. Source code for review.
+26. Access to the code versioning repository.
+27. Document with images with evidence of the application
